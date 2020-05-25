@@ -1,9 +1,10 @@
-def lcs(x,y,m,n):
+# Lcs program with O(2^n) time complxity.
+def lcs(x,y,n,m):
     if m==0 or n==0:
         return 0
-    elif x[m-1]==y[n-1]:
-        return 1+lcs(x,y,m-1,n-1)
+    elif x[n-1]==y[m-1]:
+        return 1+lcs(x,y,n-1,m-1)
     else:
-        return max(lcs(x,y,m,n-1),lcs(x,y,m-1,n))
-x,y=map(str,input().split())
+        return max(lcs(x,y,n-1,m),lcs(x,y,n,m-1))
+x,y=input(),input()
 print(lcs(x,y,len(x),len(y)))
