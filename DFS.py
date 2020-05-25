@@ -1,4 +1,3 @@
-q=[]
 def dfs(s,ss,visited):
     print(ss,end=' ')
     for i in s[ss]:
