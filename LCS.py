@@ -1,4 +1,4 @@
-# Lcs program with O(2^n) time complxity.
+# Lcs program with O(2^n) time complexity.
 def lcs(x,y,n,m):
     if m==0 or n==0:
         return 0
