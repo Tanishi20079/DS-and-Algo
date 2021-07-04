@@ -5,6 +5,8 @@
 # 10--->9--->3--->1 stesp=3
 #return min(3,4)
 
+#time and space both O(n)
+
 def minSteptoOne(n,dp):
     if n==2 or n==3:return 1
     if n==1:return 0
