@@ -1,5 +1,19 @@
 #no. of ways to reach bottom right from top left with only right or down moves.
 # "#" is the blocked way and "." is clear path
+# input
+#      7 5
+#      ....#
+#      .....
+#      .##..
+#      ....#
+#      #.#..
+#      ..##.
+#      ..#..
+
+# Output- 5
+
+
+
 
 
 n,m=map(int,input().split())
