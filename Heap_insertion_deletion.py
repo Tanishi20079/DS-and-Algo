@@ -25,6 +25,12 @@ def deletePeek(heap):
     heap[0],heap[len(heap)-1]=heap[len(heap)-1],heap[0]
     heap.pop()
     downheapify(heap,0)
+
+def delete_at_x(heap,x):
+    heap[x]=10**9
+    downheapify(heap,0)
+    deletePeek(heap)
+    
     
 
 n=int(input())
@@ -34,4 +40,6 @@ for i in range(n):
     upheapify(heap,i)
 print(heap)
 deletePeek(heap)
+x=int(input("Enter element for deleting"))
+delete_at_x(heap,heap.index(x))
 print(heap)
