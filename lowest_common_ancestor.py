@@ -50,11 +50,14 @@ class Node:
 '''
 
 def lca(root, v1, v2):
-    if root.info>v1 and root.info>v2:
-        lca(root.left,v1,v2)
-    if root.info<v1 and root.info<v2:
-        lca(root.right,v1,v2)
-    return root
+    if (root.info < v1 and root.info > v2) or (root.info > v1 and root.info < v2):
+        return root
+    elif root.info < v1 and root.info < v2:
+        return lca(root.right, v1, v2)
+    elif root.info > v1 and root.info > v2:
+        return lca(root.left, v1, v2)
+    elif root.info == v1 or root.info == v2:
+        return root
 
 # tree = BinarySearchTree()
 # t = int(input())
